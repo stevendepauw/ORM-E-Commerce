@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
       },
       {
         model: Tag,
-        attributes: ['tag']
+        attributes: ['tag_name']
       }
     ]
   })
@@ -37,7 +37,7 @@ router.get('/:id', (req, res) => {
     },
     {
       model: Tag,
-      attributes: ['tag']
+      attributes: ['tag_name']
     }]
   })
     .then((product) => res.status(200).json(product))
